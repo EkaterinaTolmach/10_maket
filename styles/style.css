@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'HelveticaNeueLT Std Med';
+  src: url("/fonts/Helvetica-Neue-LT-Std-65-Medium.woff"), url("/fonts/Helvetica-Neue-LT-Std-65-Medium.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Lato Black';
+  src: url("/fonts/Lato-Black.woff"), url("/fonts/Lato-Black.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Lato Light';
+  src: url("/fonts/LatoLight.woff"), url("/fonts/LatoLight.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/latoregular.woff"), url("/fonts/latoregular.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Raleway ExtraBold';
+  src: url("/fonts/raleway-extraboldall.woff"), url("/fonts/raleway-extraboldall.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Raleway';
+  src: url("/fonts/ralewayregular.woff"), url("/fonts/ralewayregular.woff2");
+  font-weight: 400; }
+@font-face {
+  font-family: 'Raleway-Heavy';
+  src: url("/fonts/ralewayblack.woff"), url("/fonts/ralewayblack.woff2");
+  font-weight: 400; }
+/*-----------------------╨Э╨░╤З╨░╨╗╨╛ "╨Ю╨▒╤Й╨╕╨╡ ╤Б╤В╨╕╨╗╨╕"------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal; }
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+iframe {
+  outline: none;
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+a:active,
+a:visited,
+a:focus {
+  outline: none;
+  border: none; }
+
+p {
+  margin: 0; }
+
+button, input, textarea,
+input:focus,
+input:active {
+  outline: none;
+  border: none; }
+
+button {
+  cursor: pointer; }
+
+.main-width {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px; }
