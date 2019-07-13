@@ -1,39 +1,44 @@
 @font-face{
   font-family: 'HelveticaNeueLT Std Med';
-  src: url('/fonts/Helvetica-Neue-LT-Std-65-Medium.woff'), url('/fonts/Helvetica-Neue-LT-Std-65-Medium.woff2');
+  src: url('fonts/Helvetica-Neue-LT-Std-65-Medium.woff'), url('fonts/Helvetica-Neue-LT-Std-65-Medium.woff2');
+  font-weight: 400;
+}
+@font-face{
+  font-family: 'Helvetica Neue LT Std - Hv';
+  src: url('fonts/HelveticaNeueLTStd-Hv.woff'), url('fonts/HelveticaNeueLTStd-Hv.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Lato Black';
-  src: url('/fonts/Lato-Black.woff'), url('/fonts/Lato-Black.woff2');
+  src: url('fonts/Lato-Black.woff'), url('fonts/Lato-Black.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Lato Light';
-  src: url('/fonts/LatoLight.woff'), url('/fonts/LatoLight.woff2');
+  src: url('fonts/LatoLight.woff'), url('fonts/LatoLight.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Lato';
-  src: url('/fonts/latoregular.woff'), url('/fonts/latoregular.woff2');
+  src: url('fonts/latoregular.woff'), url('fonts/latoregular.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Raleway ExtraBold';
-  src: url('/fonts/raleway-extraboldall.woff'), url('/fonts/raleway-extraboldall.woff2');
+  src: url('fonts/raleway-extraboldall.woff'), url('fonts/raleway-extraboldall.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Raleway';
-  src: url('/fonts/ralewayregular.woff'), url('/fonts/ralewayregular.woff2');
+  src: url('fonts/ralewayregular.woff'), url('fonts/ralewayregular.woff2');
   font-weight: 400;
 }
 @font-face{
   font-family: 'Raleway-Heavy';
-  src: url('/fonts/ralewayblack.woff'), url('/fonts/ralewayblack.woff2');
+  src: url('fonts/ralewayblack.woff'), url('fonts/ralewayblack.woff2');
   font-weight: 400;
 }
-/*-----------------------Начало "Общие стили"------------------------*/
+/*-----------------------Normalize------------------------*/
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -42,6 +47,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', arial, sans-serif;
+  background-color: #fafcfc;
 }
 ul, li {
   margin: 0;
@@ -96,4 +103,70 @@ button {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/****************VARIABLES******************/
+$brightColor: #18a3dd;
+/*****************HEADER******************/
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  &__logo {
+    align-self: start;
+    display: block;
+    &-img {
+      width: 68px;
+      height: 68px;
+      background: url("../images/logo.svg") center center no-repeat;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    &-name {
+      font-family: "Helvetica Neue LT Std - Hv", arial, sans-serif;
+      color: #656973;
+      font-size: 15px;
+      font-weight: 400;
+      vertical-align: middle;
+    }
+  }
+  &__nav {
+    justify-self: end;
+    align-self: center;
+  }
+}
+.menu {
+  &__btn {
+    display: block;
+    width: 35px;
+    height: 29px;
+  }
+  &__list {
+    display: none;
+  }
+  &__burger-line {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #666666;
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 6px;
+      background-color: #666666;
+      transform: translateY(19px);
+    }
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 6px;
+      background-color: #666666;
+      transform: translateY(12.5px);
+    }
+  }
 }
