@@ -38,6 +38,11 @@
   src: url('fonts/ralewayblack.woff'), url('fonts/ralewayblack.woff2');
   font-weight: 400;
 }
+
+/****************VARIABLES******************/
+$brightColor: #18a3dd;
+$textColor: #333740;
+
 /*-----------------------Normalize------------------------*/
 * {
   -webkit-box-sizing: border-box;
@@ -49,6 +54,7 @@ body {
   padding: 0;
   font-family: 'Lato', arial, sans-serif;
   background-color: #fafcfc;
+  color: $textColor;
 }
 ul, li {
   margin: 0;
@@ -105,8 +111,7 @@ button {
   padding: 0 20px;
 }
 
-/****************VARIABLES******************/
-$brightColor: #18a3dd;
+
 /*****************HEADER******************/
 .header {
   display: grid;
@@ -136,6 +141,7 @@ $brightColor: #18a3dd;
   &__nav {
     justify-self: end;
     align-self: center;
+    position: relative;
   }
 }
 .menu {
@@ -143,30 +149,67 @@ $brightColor: #18a3dd;
     display: block;
     width: 35px;
     height: 29px;
+    //position: relative;
+    &:hover .menu__burger-line{
+      width: 18px;
+    }
+    &:hover .menu__burger-line::before{
+      width: 25px;
+    }
   }
   &__list {
     display: none;
+    position: absolute;
+    background: #fafcfc;
+    width: 300px;
+    right: 0;
+    padding: 10px;
+    text-align: right;
+    z-index: 10;
+    box-shadow: 0 1px 4px grey;
+  }
+  &__item {
+    text-transform: uppercase;
+    //border-right: 1px solid $brightColor;
+  }
+  &__link {
+    color: $textColor;
+    display: block;
+    padding: 5px;
+    transition: transform 0.1s ease-in-out,
+                color 0.1s ease-in-out,
+                background-color 0.1s ease-in-out;
+    &:hover {
+      transform: translateX(-2px);
+      color: #fff;
+      background-color: $brightColor;
+    }
   }
   &__burger-line {
     display: block;
-    width: 100%;
+    width: 35px;
     height: 6px;
     background-color: #666666;
+    transition: width 0.2s ease-in-out;
+    border-radius: 2px;
     &::after {
       display: block;
       content: "";
-      width: 100%;
+      width: 35px;
       height: 6px;
       background-color: #666666;
       transform: translateY(19px);
+      border-radius: 2px;
     }
     &::before {
       display: block;
       content: "";
-      width: 100%;
+      width: 35px;
       height: 6px;
       background-color: #666666;
       transform: translateY(12.5px);
+      transition: width 0.2s ease-in-out;
+      border-radius: 2px;
     }
   }
 }

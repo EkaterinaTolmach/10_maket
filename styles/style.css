@@ -30,6 +30,7 @@
   font-family: 'Raleway-Heavy';
   src: url("fonts/ralewayblack.woff"), url("fonts/ralewayblack.woff2");
   font-weight: 400; }
+/****************VARIABLES******************/
 /*-----------------------Normalize------------------------*/
 * {
   -webkit-box-sizing: border-box;
@@ -40,7 +41,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Lato', arial, sans-serif;
-  background-color: #fafcfc; }
+  background-color: #fafcfc;
+  color: #333740; }
 
 ul, li {
   margin: 0;
@@ -96,7 +98,6 @@ button {
   margin: 0 auto;
   padding: 0 20px; }
 
-/****************VARIABLES******************/
 /*****************HEADER******************/
 .header {
   display: grid;
@@ -122,30 +123,59 @@ button {
       vertical-align: middle; }
   .header__nav {
     justify-self: end;
-    align-self: center; }
+    align-self: center;
+    position: relative; }
 
 .menu__btn {
   display: block;
   width: 35px;
   height: 29px; }
+  .menu__btn:hover .menu__burger-line {
+    width: 18px; }
+  .menu__btn:hover .menu__burger-line::before {
+    width: 25px; }
 .menu__list {
-  display: none; }
+  display: none;
+  position: absolute;
+  background: #fafcfc;
+  width: 300px;
+  right: 0;
+  padding: 10px;
+  text-align: right;
+  z-index: 10;
+  box-shadow: 0 1px 4px grey; }
+.menu__item {
+  text-transform: uppercase; }
+.menu__link {
+  color: #333740;
+  display: block;
+  padding: 5px;
+  transition: transform 0.1s ease-in-out, color 0.1s ease-in-out, background-color 0.1s ease-in-out; }
+  .menu__link:hover {
+    transform: translateX(-2px);
+    color: #fff;
+    background-color: #18a3dd; }
 .menu__burger-line {
   display: block;
-  width: 100%;
+  width: 35px;
   height: 6px;
-  background-color: #666666; }
+  background-color: #666666;
+  transition: width 0.2s ease-in-out;
+  border-radius: 2px; }
   .menu__burger-line::after {
     display: block;
     content: "";
-    width: 100%;
+    width: 35px;
     height: 6px;
     background-color: #666666;
-    transform: translateY(19px); }
+    transform: translateY(19px);
+    border-radius: 2px; }
   .menu__burger-line::before {
     display: block;
     content: "";
-    width: 100%;
+    width: 35px;
     height: 6px;
     background-color: #666666;
-    transform: translateY(12.5px); }
+    transform: translateY(12.5px);
+    transition: width 0.2s ease-in-out;
+    border-radius: 2px; }
