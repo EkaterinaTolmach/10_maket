@@ -416,3 +416,69 @@ body {
   letter-spacing: 0.4px; }
   .features__descr--right {
     text-align: right; }
+
+.results {
+  background-color: #ffffff; }
+  .results__wrap {
+    padding-top: 110px;
+    padding-bottom: 115px; }
+  .results__title::after {
+    content: "Don't forget to check these real success."; }
+
+.res-slider__item {
+  display: grid;
+  grid-template-columns: 555px 1fr;
+  grid-gap: 30px;
+  width: 760px;
+  height: 400px;
+  margin: 0 auto; }
+.res-slider__pictures {
+  position: relative; }
+.res-slider__img {
+  overflow: hidden; }
+  .res-slider__img--before {
+    width: 262px;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 150px);
+    z-index: 2; }
+  .res-slider__img--after {
+    width: 360px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    z-index: 1; }
+.res-slider__descr {
+  align-self: center; }
+.res-slider__effects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+.res-slider__values {
+  color: #333740;
+  text-transform: uppercase; }
+.res-slider__number {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px; }
+.res-slider__num-caption {
+  font-weight: 300;
+  line-height: 24px; }
+.res-slider__sign {
+  color: #18a3dd;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 0.4px; }
+.res-slider__client {
+  color: #333740;
+  text-transform: uppercase;
+  padding-left: 26px; }
+  .res-slider__client.border::before {
+    left: 0;
+    height: 40px; }
+.res-slider__name {
+  font-family: "Raleway - Extra Bold", arial, sans-serif; }
+.res-slider__age {
+  font-family: "Lato", arial, sans-serif;
+  font-weight: 300;
+  line-height: 24px; }
