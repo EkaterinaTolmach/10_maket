@@ -9,7 +9,7 @@
   font-weight: 400;
 }
 @font-face{
-  font-family: 'Lato Black';
+  font-family: 'Lato - Black';
   src: url('fonts/Lato-Black.woff'), url('fonts/Lato-Black.woff2');
   font-weight: 400;
 }
@@ -251,8 +251,6 @@ body {
   }
 }
 .head {
-  //background: url("../images/noise_bckg.png") center center repeat-x;
-  //z-index: 2;
   position: relative;
   &::before {
     display: block;
@@ -273,8 +271,6 @@ body {
     z-index: -2;
     top: calc(50% - 100px);
   }
-
-  //background-size: 100% 200px;
   &__wrap {
     padding-top: 170px;
     padding-bottom: 170px;
@@ -323,8 +319,6 @@ body {
   }
   &__order-btn {
     width: 180px;
-    //justify-self: end;
-    //margin-right: 10px;
   }
   &__play-video {
     color: $mainTextColor;
@@ -351,5 +345,59 @@ body {
     overflow: hidden;
     position: absolute;
     right: -71px;
+  }
+}
+.advantages {
+  background-image: linear-gradient(-40deg, #0f0816 0%, #21172b 90%, #21172b 100%);
+  &__wrap {
+    padding-bottom: 115px;
+    padding-top: 115px;
+    position: relative;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 404px;
+      height: 525px;
+      background: url("../images/product_single.png") center center no-repeat;
+      left: -167px;
+      top: -123px;
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 280px;
+  }
+  &__numbers {
+    color: #ffffff;
+    font-family: "Lato - Black", $commonFont;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-left: 25px;
+    line-height: 59px;
+    margin-bottom: 17px;
+    &.border::before {
+      left: 0;
+      height: 50px;
+      top: 8px;
+    }
+  }
+  &__sign {
+    color: $brightColor;
+    font-family: "Lato", $commonFont;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    text-transform: uppercase;
+  }
+  &__value {
+    font-family: "Lato Light", $commonFont;
+    color: #a9a9a9;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px;
   }
 }

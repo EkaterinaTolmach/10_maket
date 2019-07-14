@@ -7,7 +7,7 @@
   src: url("fonts/HelveticaNeueLTStd-Hv.woff"), url("fonts/HelveticaNeueLTStd-Hv.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: 'Lato Black';
+  font-family: 'Lato - Black';
   src: url("fonts/Lato-Black.woff"), url("fonts/Lato-Black.woff2");
   font-weight: 400; }
 @font-face {
@@ -289,3 +289,50 @@ body {
     overflow: hidden;
     position: absolute;
     right: -71px; }
+
+.advantages {
+  background-image: linear-gradient(-40deg, #0f0816 0%, #21172b 90%, #21172b 100%); }
+  .advantages__wrap {
+    padding-bottom: 115px;
+    padding-top: 115px;
+    position: relative; }
+    .advantages__wrap::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 404px;
+      height: 525px;
+      background: url("../images/product_single.png") center center no-repeat;
+      left: -167px;
+      top: -123px; }
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 280px; }
+  .advantages__numbers {
+    color: #ffffff;
+    font-family: "Lato - Black", arial, sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    padding-left: 25px;
+    line-height: 59px;
+    margin-bottom: 17px; }
+    .advantages__numbers.border::before {
+      left: 0;
+      height: 50px;
+      top: 8px; }
+  .advantages__sign {
+    color: #18a3dd;
+    font-family: "Lato", arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    text-transform: uppercase; }
+  .advantages__value {
+    font-family: "Lato Light", arial, sans-serif;
+    color: #a9a9a9;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 24px; }
