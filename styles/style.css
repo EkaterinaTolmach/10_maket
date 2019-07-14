@@ -126,7 +126,43 @@ body {
     position: absolute;
     border-radius: 2px; }
 
-/*****************HEADER******************/
+.sect-title {
+  text-transform: uppercase;
+  line-height: 22px;
+  color: #333740;
+  font-size: 30px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  margin-bottom: 115px;
+  position: relative; }
+  .sect-title::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    color: #83888f;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    bottom: -45px;
+    font-size: 16px;
+    font-family: "Lato", arial, sans-serif;
+    text-transform: none; }
+  .sect-title__main {
+    font-family: "Raleway - Extra Bold", arial, sans-serif;
+    font-weight: 400;
+    display: inline-block;
+    padding-right: 20px; }
+    .sect-title__main.border::before {
+      width: 1px;
+      right: 0;
+      height: 40px;
+      top: -9px; }
+  .sect-title__sub {
+    padding-left: 11px;
+    font-family: "Raleway", arial, sans-serif;
+    font-weight: 300;
+    display: inline-block; }
+
 .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -336,3 +372,47 @@ body {
     font-size: 16px;
     letter-spacing: 0.4px;
     line-height: 24px; }
+
+.features__wrap {
+  padding-top: 115px; }
+.features__title::after {
+  content: "Don't forget to check these real success."; }
+.features__list {
+  display: grid;
+  grid-template-columns: 1fr 480px 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0 25px; }
+.features__item--img {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+.features__item-title {
+  color: #333740;
+  font-family: "Raleway", arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0 0 25px 20px; }
+  .features__item-title.border::before {
+    left: 0;
+    height: 35px;
+    top: 4px; }
+  .features__item-title--right {
+    text-align: right;
+    padding: 0 20px 25px 0; }
+    .features__item-title--right.border::before {
+      left: 100%; }
+.features__img {
+  height: 438px;
+  width: 308px;
+  overflow: hidden;
+  margin: 0 auto; }
+.features__descr {
+  color: #5b5f64;
+  line-height: 24px;
+  font-family: "Lato", arial, sans-serif;
+  letter-spacing: 0.4px; }
+  .features__descr--right {
+    text-align: right; }

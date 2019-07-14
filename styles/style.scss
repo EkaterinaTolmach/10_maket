@@ -147,9 +147,49 @@ body {
     border-radius: 2px;
   }
 }
+.sect-title {
+  text-transform: uppercase;
+  line-height: 22px;
+  color: $mainTextColor;
+  font-size: 30px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  margin-bottom: 115px;
+  position: relative;
+  &::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    color: #83888f;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    bottom: -45px;
+    font-size: 16px;
+    font-family: 'Lato', $commonFont;
+    text-transform: none;
+  }
+  &__main {
+    font-family: "Raleway - Extra Bold", $commonFont;
+    font-weight: 400;
+    display: inline-block;
+    padding-right: 20px;
+    &.border::before {
+      width: 1px;
+      right: 0;
+      height: 40px;
+      top: -9px;
+    }
+  }
+  &__sub {
+    padding-left: 11px;
+    font-family: 'Raleway', $commonFont;
+    font-weight: 300;
+    display: inline-block;
+  }
 
+}
 
-/*****************HEADER******************/
 .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -181,6 +221,7 @@ body {
     position: relative;
   }
 }
+
 .menu {
   &__btn {
     display: block;
@@ -250,6 +291,7 @@ body {
     }
   }
 }
+
 .head {
   position: relative;
   &::before {
@@ -347,6 +389,7 @@ body {
     right: -71px;
   }
 }
+
 .advantages {
   background-image: linear-gradient(-40deg, #0f0816 0%, #21172b 90%, #21172b 100%);
   &__wrap {
@@ -399,5 +442,64 @@ body {
     font-size: 16px;
     letter-spacing: 0.4px;
     line-height: 24px;
+  }
+}
+
+.features {
+  &__wrap {
+    padding-top: 115px;
+  }
+  &__title::after {
+    content: "Don't forget to check these real success.";
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 480px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 0 25px;
+  }
+  &__item {
+    &--img {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+  &__item-title {
+    color: #333740;
+    font-family: 'Raleway', $commonFont;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 0 0 25px 20px;
+    &.border::before {
+      left: 0;
+      height: 35px;
+      top: 4px;
+    }
+    &--right {
+      text-align: right;
+      padding: 0 20px 25px 0;
+      &.border::before {
+        left: 100%;
+      }
+    }
+  }
+  &__img {
+    height: 438px;
+    width: 308px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  &__descr {
+    color: #5b5f64;
+    line-height: 24px;
+    font-family: "Lato", $commonFont;
+    letter-spacing: 0.4px;
+    &--right {
+      text-align: right;
+    }
   }
 }
