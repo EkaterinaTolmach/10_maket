@@ -86,7 +86,7 @@ a:active,
 a:visited,
 a:focus {
   outline: none;
-  border: none;
+  //border: none;
 }
 p {
   margin: 0;
@@ -99,6 +99,9 @@ input:active{
 }
 button {
   cursor: pointer;
+}
+img {
+  outline: none;
 }
 
 /****************VARIABLES******************/
@@ -509,12 +512,57 @@ body {
   &__wrap {
     padding-top: 110px;
     padding-bottom: 115px;
+    position: relative;
   }
   &__title::after {
     content: "Don't forget to check these real success.";
   }
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: end;
+    position: absolute;
+    width: 100%;
+    top: 420px;
+    z-index: 0;
+  }
+  &__nav-prev,
+  &__nav-next {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgb(198, 207, 210);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 73px;
+    transition: border-color 0.1s ease-in-out, top 0.1s ease-in-out;
+    position: relative;
+    & svg path {
+      transition: fill 0.1s ease-in-out;
+    }
+    &:hover {
+      border-color: $brightColor;
+      & svg path {
+        fill: $brightColor;
+      }
+    }
+    &:active {
+      top: 2px;
+    }
+
+  }
+  &__nav-prev {
+    transform: rotateZ(180deg);
+    justify-self: start;
+    &:active {
+      top: 2px;
+    }
+  }
 }
 .res-slider {
+  max-width: 760px;
+  margin: 0 auto;
   &__item {
     display: grid;
     grid-template-columns: 555px 1fr;
@@ -587,4 +635,108 @@ body {
     font-weight: 300;
     line-height: 24px;
   }
+}
+/* Slider */
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  //height: 100%;
+  min-height: 1px;
+  outline: none;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  //display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    //display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }
