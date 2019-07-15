@@ -165,6 +165,81 @@ body {
     font-weight: 300;
     display: inline-block; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  outline: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide:focus {
+    outline: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/************PAGE STYLES*************/
 .header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -521,96 +596,28 @@ body {
     font-family: "Lato", arial, sans-serif;
     font-weight: 300;
     line-height: 24px; }
+  .res-slider .slick-dots {
+    text-align: center;
+    margin-top: 50px; }
+    .res-slider .slick-dots li {
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: #d8e4e8;
+      width: 13px;
+      height: 13px;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out; }
+      .res-slider .slick-dots li:hover {
+        background-color: #a9a9a9; }
+      .res-slider .slick-dots li.slick-active {
+        background-color: #18a3dd; }
+      .res-slider .slick-dots li button {
+        display: none; }
 
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent; }
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0; }
-  .slick-list:focus {
-    outline: none; }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-  .slick-track:before, .slick-track:after {
-    content: "";
-    display: table; }
-  .slick-track:after {
-    clear: both; }
-  .slick-loading .slick-track {
-    visibility: hidden; }
-
-.slick-slide {
-  float: left;
-  min-height: 1px;
-  outline: none; }
-  [dir="rtl"] .slick-slide {
-    float: right; }
-  .slick-slide img {
-    display: block; }
-  .slick-slide.slick-loading img {
-    display: none; }
-  .slick-slide:focus {
-    outline: none; }
-  .slick-slide.dragging img {
-    pointer-events: none; }
-  .slick-loading .slick-slide {
-    visibility: hidden; }
-  .slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent; }
-
-.slick-arrow.slick-hidden {
-  display: none; }
-
-.slick-dots {
-  text-align: center;
-  margin-top: 50px; }
-  .slick-dots li {
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 50%;
-    background-color: #d8e4e8;
-    width: 13px;
-    height: 13px;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in-out; }
-    .slick-dots li:hover {
-      background-color: #a9a9a9; }
-    .slick-dots li.slick-active {
-      background-color: #18a3dd; }
-    .slick-dots li button {
-      display: none; }
+.testimonials__wrap {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+.testimonials__title::after {
+  content: "We don't just sell, we're beloved too.";
+  color: #767a7d; }

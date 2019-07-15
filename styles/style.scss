@@ -190,8 +190,103 @@ body {
     font-weight: 300;
     display: inline-block;
   }
-
 }
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  min-height: 1px;
+  outline: none;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.dragging img {
+    pointer-events: none;
+  }
+  .slick-loading & {
+    visibility: hidden;
+  }
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/************PAGE STYLES*************/
 
 .header {
   display: grid;
@@ -636,121 +731,38 @@ body {
     font-weight: 300;
     line-height: 24px;
   }
-}
-
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0;
-
-  &:focus {
-    outline: none;
-  }
-
-  &.dragging {
-    cursor: pointer;
-    cursor: hand;
-  }
-}
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-
-  .slick-loading & {
-    visibility: hidden;
-  }
-}
-.slick-slide {
-  float: left;
-  min-height: 1px;
-  outline: none;
-  [dir="rtl"] & {
-    float: right;
-  }
-  img {
-    display: block;
-  }
-  &.slick-loading img {
-    display: none;
-  }
-  &:focus {
-    outline: none;
-  }
-  &.dragging img {
-    pointer-events: none;
-  }
-  .slick-loading & {
-    visibility: hidden;
-  }
-  .slick-vertical & {
-    display: block;
-    height: auto;
-    border: 1px solid transparent;
-  }
-}
-.slick-arrow.slick-hidden {
-  display: none;
-}
-.slick-dots {
-  text-align: center;
-  margin-top: 50px;
-  & li {
-    display: inline-block;
-    margin: 0 10px;
-    border-radius: 50%;
-    background-color: #d8e4e8;
-    width: 13px;
-    height: 13px;
-    cursor: pointer;
-    transition: background-color 0.1s ease-in-out;
-    &:hover {
-      background-color: #a9a9a9;
+  & .slick-dots {
+    text-align: center;
+    margin-top: 50px;
+    & li {
+      display: inline-block;
+      margin: 0 10px;
+      border-radius: 50%;
+      background-color: #d8e4e8;
+      width: 13px;
+      height: 13px;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in-out;
+      &:hover {
+        background-color: #a9a9a9;
+      }
+      &.slick-active {
+        background-color: $brightColor;
+      }
+      & button {
+        display: none;
+      }
     }
-    &.slick-active {
-      background-color: $brightColor;
-    }
-    & button {
-      display: none;
-    }
+  }
+}
+
+.testimonials {
+  &__wrap {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  &__title::after {
+    content: "We don't just sell, we're beloved too.";
+    color: #767a7d;
   }
 }
