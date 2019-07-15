@@ -435,7 +435,7 @@ body {
     position: absolute;
     width: 100%;
     top: 420px;
-    z-index: 0; }
+    z-index: 1; }
   .results__nav-prev, .results__nav-next {
     display: block;
     width: 70px;
@@ -462,7 +462,8 @@ body {
 
 .res-slider {
   max-width: 760px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 2; }
   .res-slider__item {
     display: grid;
     grid-template-columns: 555px 1fr;
@@ -594,3 +595,22 @@ body {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.slick-dots {
+  text-align: center;
+  margin-top: 50px; }
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #d8e4e8;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out; }
+    .slick-dots li:hover {
+      background-color: #a9a9a9; }
+    .slick-dots li.slick-active {
+      background-color: #18a3dd; }
+    .slick-dots li button {
+      display: none; }

@@ -525,7 +525,7 @@ body {
     position: absolute;
     width: 100%;
     top: 420px;
-    z-index: 0;
+    z-index: 1;
   }
   &__nav-prev,
   &__nav-next {
@@ -563,6 +563,7 @@ body {
 .res-slider {
   max-width: 760px;
   margin: 0 auto;
+  z-index: 2;
   &__item {
     display: grid;
     grid-template-columns: 555px 1fr;
@@ -636,8 +637,8 @@ body {
     line-height: 24px;
   }
 }
-/* Slider */
 
+/* Slider */
 .slick-slider {
   position: relative;
   display: block;
@@ -701,7 +702,6 @@ body {
 }
 .slick-slide {
   float: left;
-  //height: 100%;
   min-height: 1px;
   outline: none;
   [dir="rtl"] & {
@@ -716,21 +716,12 @@ body {
   &:focus {
     outline: none;
   }
-
-  //display: none;
-
   &.dragging img {
     pointer-events: none;
   }
-
-  .slick-initialized & {
-    //display: block;
-  }
-
   .slick-loading & {
     visibility: hidden;
   }
-
   .slick-vertical & {
     display: block;
     height: auto;
@@ -739,4 +730,27 @@ body {
 }
 .slick-arrow.slick-hidden {
   display: none;
+}
+.slick-dots {
+  text-align: center;
+  margin-top: 50px;
+  & li {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #d8e4e8;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+    &:hover {
+      background-color: #a9a9a9;
+    }
+    &.slick-active {
+      background-color: $brightColor;
+    }
+    & button {
+      display: none;
+    }
+  }
 }
