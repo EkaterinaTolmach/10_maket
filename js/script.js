@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+/************Sliders**************/
     var prevArrow ='<a href="#" class="results__nav-prev">\n' +
         '                        <svg\n' +
         '                                xmlns="http://www.w3.org/2000/svg"\n' +
@@ -35,5 +36,29 @@ $(document).ready(function() {
             cssEase: 'linear',
             dots: true,
         });
+    }
+    /************END Sliders****************/
+
+    /*************Ingredients***************/
+    if ($('.ingredients__table')) {
+        $('.ingredients__title').on('click', function (e) {
+            e.preventDefault();
+            var active = $(this),
+                // ingidient = active.attr('href').slice(1),
+                description = active.siblings(),
+                imgSrc = description.children('.description__pict').find('img').attr('src'),
+                name = active.children('.ingredients__name').html(),
+                value = active.children('.ingredients__value').html(),
+                text = description.children('.description__text').html();
+
+            $('.ingredients__title').removeClass('active');
+            active.addClass('active');
+
+            $('#ingredient_name').html(name);
+            $('#ingredient_value').html(value);
+            $('#ingredient_text').html(text);
+
+            console.log(name);
+        })
     }
 });
