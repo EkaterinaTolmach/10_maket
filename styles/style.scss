@@ -852,3 +852,173 @@ body {
     }
   }
 }
+
+.facts {
+  &__wrap {
+    padding-top: 120px;
+    padding-bottom: 117px;
+  }
+
+}
+.ingredients {
+  display: grid;
+  //grid-template-columns: repeat(2, 2fr);
+  grid-template-columns: 490px 1fr;
+  grid-template-rows: 1fr 50px;
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  max-width: 955px;
+  margin: 0 auto;
+  &__table {
+    //max-width: 490px;
+    //margin: 0 auto;
+    //min-width: 490px;
+  }
+  &__table-title {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+    align-items: center;
+    border-bottom: 5px solid $mainTextColor;
+    padding-bottom: 15px;
+    width: 457px;
+    margin: 0 auto;
+
+    & h3 {
+      justify-self: start;
+      color: $mainTextColor;
+      font-family: "Lato - Black", $commonFont;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+  }
+  &__caption {
+    justify-self: end;
+    color: $mainTextColor;
+    line-height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    text-align: right;
+
+  }
+  &__caption-per {
+    display: block;
+    font-family: "Lato - Black", $commonFont;
+    font-weight: 400;
+  }
+  &__caption-gr {
+    display: block;
+    font-weight: 300;
+  }
+  &__title {
+    width: 457px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    padding: 10px 0;
+    align-items: center;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #ebebeb;
+    transition: padding 0.1s ease-in-out,
+                box-shadow 0.1s ease-in-out,
+                border-color 0.1s ease-in-out,
+                width 0.1s ease-in-out;
+    &.active {
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.24);
+      border: 1px solid #d7d7d7;
+      background-color: #ffffff;
+      padding: 10px;
+      width: 100%;
+    }
+    &:hover .ingredients__name, &:hover .ingredients__value {
+      color: $brightColor;
+    }
+
+  }
+  &__name {
+    text-align: left;
+    color: $mainTextColor;
+    transition: color 0.1s ease-in-out;
+  }
+  &__value {
+    text-align: right;
+    justify-self: end;
+    color: $mainTextColor;
+    transition: color 0.1s ease-in-out;
+  }
+  &__description {
+    max-width: 365px;
+    &--inline {
+      display: none;
+    }
+  }
+  &__download {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  &__download {
+  }
+  &__docs-link {
+    width: 455px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 40px;
+    & span:last-of-type {
+      justify-self: end;
+    }
+    & span:first-of-type {
+      justify-self: start;
+    }
+  }
+}
+.description {
+  &__pict {
+    display: block;
+    width: 103px;
+    height: 116px;
+    overflow: hidden;
+  }
+  &__title {
+    padding-left: 20px;
+    margin: 50px 0 20px 0;
+    &::before {
+      height: 40px;
+      left: 0;
+      top: 4px;
+    }
+  }
+  &__name {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    color: $mainTextColor;
+    font-family: 'Raleway', $commonFont;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  &__value {
+    line-height: 24px;
+    color: $mainTextColor;
+    font-family: "Lato Light", $commonFont;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    padding-right: 3px;
+  }
+  &__text {
+    color: #666666;
+    line-height: 24px;
+    font-family: "Lato Light", $commonFont;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+  }
+
+}
