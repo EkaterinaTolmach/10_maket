@@ -19,6 +19,10 @@
   src: url("fonts/latoregular.woff"), url("fonts/latoregular.woff2");
   font-weight: 400; }
 @font-face {
+  font-family: "Lato - Light Italic";
+  src: url("fonts/latolightitalic.woff"), url("fonts/latolightitalic.woff2");
+  font-weight: 400; }
+@font-face {
   font-family: 'Raleway - Extra Bold';
   src: url("fonts/raleway-extraboldall.woff"), url("fonts/raleway-extraboldall.woff2");
   font-weight: 400; }
@@ -238,6 +242,25 @@ body {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.slick-dots {
+  text-align: center;
+  margin-top: 50px; }
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #d8e4e8;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out; }
+    .slick-dots li:hover {
+      background-color: #a9a9a9; }
+    .slick-dots li.slick-active {
+      background-color: #18a3dd; }
+    .slick-dots li button {
+      display: none; }
 
 /************PAGE STYLES*************/
 .header {
@@ -596,28 +619,78 @@ body {
     font-family: "Lato", arial, sans-serif;
     font-weight: 300;
     line-height: 24px; }
-  .res-slider .slick-dots {
-    text-align: center;
-    margin-top: 50px; }
-    .res-slider .slick-dots li {
-      display: inline-block;
-      margin: 0 10px;
-      border-radius: 50%;
-      background-color: #d8e4e8;
-      width: 13px;
-      height: 13px;
-      cursor: pointer;
-      transition: background-color 0.1s ease-in-out; }
-      .res-slider .slick-dots li:hover {
-        background-color: #a9a9a9; }
-      .res-slider .slick-dots li.slick-active {
-        background-color: #18a3dd; }
-      .res-slider .slick-dots li button {
-        display: none; }
 
-.testimonials__wrap {
-  padding-top: 120px;
-  padding-bottom: 120px; }
-.testimonials__title::after {
-  content: "We don't just sell, we're beloved too.";
-  color: #767a7d; }
+.testimonials {
+  background: #0f0816 url("../images/bckg_01.jpg") no-repeat center center;
+  position: relative; }
+  .testimonials__wrap {
+    padding-top: 120px;
+    padding-bottom: 120px; }
+    .testimonials__wrap::after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 30%;
+      height: 100%;
+      background-image: linear-gradient(to left, #0f0816 0%, rgba(15, 8, 22, 0.8) 95%, transparent 100%);
+      top: 0;
+      right: 0; }
+  .testimonials__title {
+    color: #e5e5e5; }
+    .testimonials__title::after {
+      content: "We don't just sell, we're beloved too.";
+      color: #767a7d; }
+
+.reviews {
+  max-width: 735px;
+  margin: 0 auto; }
+  .reviews__item {
+    display: grid;
+    grid-template-rows: 62px 73px;
+    grid-gap: 32px;
+    text-align: center; }
+  .reviews__text {
+    color: #a9a9a9;
+    font-family: "Lato - Light Italic", arial, sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.4px; }
+  .reviews__client {
+    display: grid;
+    grid-template-columns: 65px 125px;
+    grid-gap: 30px;
+    margin: 0 auto; }
+  .reviews__img {
+    width: 65px;
+    height: 73px;
+    overflow: hidden; }
+  .reviews__info {
+    text-align: left; }
+    .reviews__info.border::before {
+      width: 36px;
+      height: 5px;
+      bottom: 11px; }
+  .reviews__name {
+    display: inline-block;
+    color: #e5e5e5;
+    font-family: "Raleway", arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 4px 0; }
+  .reviews__location {
+    display: inline-block;
+    color: #a9a9a9;
+    font-size: 14px;
+    font-family: "Lato Light", arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.35px;
+    line-height: 24px; }
+  .reviews .slick-dots li {
+    background-color: #342e3a; }
+    .reviews .slick-dots li:hover {
+      background-color: #453d4d; }
+    .reviews .slick-dots li.slick-active {
+      background-color: #18a3dd; }
