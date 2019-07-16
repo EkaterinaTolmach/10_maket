@@ -28,4 +28,12 @@ $(document).ready(function() {
             nextArrow: nextArrow
         });
     }
+    if($('#js-testimonials-slider')) {
+        $('#js-testimonials-slider').slick({
+            infinite: true,
+            arrows: false,
+            cssEase: 'linear',
+            dots: true,
+        });
+    }
 });
