@@ -824,3 +824,46 @@ body {
   font-family: "Lato Light", arial, sans-serif;
   font-weight: 300;
   letter-spacing: 0.4px; }
+
+.certifications {
+  background-color: #f1f4f5; }
+  .certifications__wrap {
+    padding-top: 80px;
+    padding-bottom: 80px; }
+  .certifications__title {
+    margin-bottom: 84px; }
+    .certifications__title::after {
+      content: "We don't sell craps, We're certified."; }
+    .certifications__title .sect-title__main {
+      padding: 0; }
+
+.cert-slider {
+  width: 969px;
+  margin: 0 auto; }
+  .cert-slider__item {
+    width: 193px;
+    border-right: 1px solid #dcdcdc;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .cert-slider__item:last-of-type {
+      border: none; }
+  .cert-slider__img-wrap {
+    background: #c0ced3; }
+    .cert-slider__img-wrap--cradle {
+      width: 89px;
+      height: 91px;
+      background: #b4c5ca; }
+    .cert-slider__img-wrap--qopy {
+      width: 151px;
+      height: 59px; }
+    .cert-slider__img-wrap--nsf {
+      background: none; }
+    .cert-slider__img-wrap--sgs {
+      width: 79px;
+      height: 78px; }
+    .cert-slider__img-wrap--geo {
+      width: 178px;
+      height: 104px;
+      background: #b4c5ca; }

@@ -1022,5 +1022,60 @@ body {
     font-weight: 300;
     letter-spacing: 0.4px;
   }
+}
+.certifications {
+  background-color: #f1f4f5;
+  &__wrap {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &__title {
+    margin-bottom: 84px;
+    &::after {
+      content: "We don't sell craps, We're certified.";
+    }
+    & .sect-title__main {
+      padding: 0;
+    }
+  }
 
+}
+.cert-slider {;
+  width: 969px;
+  margin: 0 auto;
+  &__item {
+    width: 193px;
+    border-right: 1px solid #dcdcdc;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:last-of-type {
+      border: none;
+    }
+  }
+  &__img-wrap {
+    background: #c0ced3;
+    &--cradle {
+      width: 89px;
+      height: 91px;
+      background: #b4c5ca;
+    }
+    &--qopy {
+      width: 151px;
+      height: 59px;
+    }
+    &--nsf {
+      background: none;
+    }
+    &--sgs {
+      width: 79px;
+      height: 78px;
+    }
+    &--geo {
+      width: 178px;
+      height: 104px;
+      background: #b4c5ca;
+    }
+  }
 }
