@@ -141,7 +141,7 @@ body {
   border-radius: 25px;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
   &:hover {
-    background: #1691c5;
+    background: darken($brightColor, 7%);
   }
 }
 .border {
@@ -985,6 +985,8 @@ body {
     width: 103px;
     height: 116px;
     overflow: hidden;
+    clip-path: url(#myPath);
+    -webkit-clip-path: url(#myPath);
   }
   &__title {
     padding-left: 20px;

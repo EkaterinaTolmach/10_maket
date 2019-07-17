@@ -120,7 +120,7 @@ body {
   border-radius: 25px;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out; }
   .btn:hover {
-    background: #1691c5; }
+    background: #158bbd; }
 
 .border {
   position: relative; }
@@ -792,7 +792,9 @@ body {
   display: block;
   width: 103px;
   height: 116px;
-  overflow: hidden; }
+  overflow: hidden;
+  clip-path: url(#myPath);
+  -webkit-clip-path: url(#myPath); }
 .description__title {
   padding-left: 20px;
   margin: 50px 0 20px 0; }
