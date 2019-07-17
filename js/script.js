@@ -37,6 +37,15 @@ $(document).ready(function() {
             dots: true,
         });
     }
+    if($('#js-certifications__slider')) {
+        $('#js-certifications__slider').slick({
+            infinite: true,
+            arrows: false,
+            cssEase: 'linear',
+            dots: false,
+            slidesToShow: 5,
+        });
+    }
     /************END Sliders****************/
 
     /*************Ingredients***************/
