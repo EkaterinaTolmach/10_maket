@@ -55,6 +55,7 @@ $(document).ready(function() {
             active.addClass('active');
 
             $('#ingredient_name').html(name);
+            $('#ingredient_image').attr('src', imgSrc);
             $('#ingredient_value').html(value);
             $('#ingredient_text').html(text);
 
