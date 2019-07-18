@@ -590,12 +590,10 @@
                     <span class="sect-title__sub">Your Issue</span>
                 </h2>
                 <form action="#" method="post" enctype="text/plain" class="issues__form">
-                    <div class="issues__block">
-                        <input class="issues__input--half" type="text" name="name" placeholder="Name">
-                        <input class="issues__input--half" type="email" name="email" placeholder="Email">
-                    </div>
-                    <input class="issues__input" type="text" name="subject" placeholder="Subject">
-                    <textarea class="issues__input--textarea" name="question"></textarea>
+                    <input class="issues__input" type="text" name="name" placeholder="Name">
+                    <input class="issues__input" type="email" name="email" placeholder="Email">
+                    <input class="issues__input issues__input--full" type="text" name="subject" placeholder="Subject">
+                    <textarea class="issues__input issues__input--full issues__input--textarea" name="question"></textarea>
                     <button type="reset" class="issues__submit btn">Send</button>
                 </form>
             </div>
