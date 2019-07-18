@@ -870,42 +870,62 @@ body {
       height: 104px;
       background: #b4c5ca; }
 
-.supplement__wrap {
-  padding-top: 120px;
-  padding-bottom: 25px;
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  grid-template-rows: 489px;
-  grid-gap: 40px; }
-.supplement__left {
+.supplement {
   position: relative; }
-  .supplement__left img {
+  .supplement::before {
+    display: block;
     position: absolute;
-    left: -100px; }
-.supplement__right {
-  padding-top: 79px; }
-.supplement__title {
-  padding-left: 35px;
-  margin-bottom: 13px;
-  text-align: left; }
-  .supplement__title::before {
-    left: 0;
-    width: 5px;
-    height: 40px;
-    top: 3px; }
-.supplement__price {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 32px;
-  padding-left: 30px; }
-.supplement__text {
-  color: #666666;
-  font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  margin-bottom: 40px; }
-.supplement__order {
-  width: 181px; }
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, #fafcfc 38%, transparent);
+    z-index: -1; }
+  .supplement::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 200px;
+    background: url("../images/noise_bckg.png") center center repeat-x;
+    z-index: -2;
+    top: calc(50% - 100px); }
+  .supplement__wrap {
+    padding-top: 120px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    grid-template-rows: 489px;
+    grid-gap: 40px; }
+  .supplement__left {
+    position: relative; }
+    .supplement__left img {
+      position: absolute;
+      left: -115px; }
+  .supplement__right {
+    padding-top: 79px;
+    padding-right: 85px; }
+  .supplement__title {
+    padding-left: 35px;
+    margin-bottom: 13px;
+    text-align: left; }
+    .supplement__title::before {
+      left: 0;
+      width: 5px;
+      height: 40px;
+      top: 3px; }
+  .supplement__price {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+    padding-left: 30px; }
+  .supplement__text {
+    color: #666666;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 40px; }
+  .supplement__order {
+    width: 181px; }
