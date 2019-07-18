@@ -1102,7 +1102,7 @@ body {
     height: 200px;
     background: url("../images/noise_bckg.png") center center repeat-x;
     z-index: -2;
-    top: calc(50% - 100px);
+    top: 43%;
   }
   &__wrap {
     padding-top: 120px;
@@ -1156,8 +1156,38 @@ body {
 }
 
 .subscribing {
-
+  background: #000000 url("../images/bckg_02.jpg") no-repeat center center;
+  position: relative;
   &__wrap {
-
+    padding-top: 95px;
+    padding-bottom: 85px;
+    //&::after {
+    //  position: absolute;
+    //  display: block;
+    //  content: "";
+    //  width: 30%;
+    //  height: 100%;
+    //  background-image: linear-gradient(to left, #0f0816 0%, rgba(15, 8, 22,0.8) 95%, transparent 100%);
+    //  top: 0;
+    //  right: 0;
+    //  z-index: 1;
+    //}
+  }
+  &__title {
+    margin-bottom: 76px;
+    color: #e5e5e5;
+    &::after {
+      content: 'We regularly knock our customers with useful tips and offers.';
+      color: #767a7d;
+    }
+  }
+  &__form {
+    width: 617px;
+    padding: 36px 30px;
+    background-color: #000000;
+    z-index: 2;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 150px;
   }
 }
