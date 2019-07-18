@@ -3,11 +3,11 @@
   src: url("fonts/Helvetica-Neue-LT-Std-65-Medium.woff"), url("fonts/Helvetica-Neue-LT-Std-65-Medium.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: 'Helvetica Neue LT Std - Hv';
+  font-family: 'Helvetica Neue LT Std-Hv';
   src: url("fonts/HelveticaNeueLTStd-Hv.woff"), url("fonts/HelveticaNeueLTStd-Hv.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: 'Lato - Black';
+  font-family: 'Lato-Black';
   src: url("fonts/Lato-Black.woff"), url("fonts/Lato-Black.woff2");
   font-weight: 400; }
 @font-face {
@@ -19,11 +19,11 @@
   src: url("fonts/latoregular.woff"), url("fonts/latoregular.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: "Lato - Light Italic";
+  font-family: "Lato-Light Italic";
   src: url("fonts/latolightitalic.woff"), url("fonts/latolightitalic.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: 'Raleway - Extra Bold';
+  font-family: 'Raleway-Extra Bold';
   src: url("fonts/raleway-extraboldall.woff"), url("fonts/raleway-extraboldall.woff2");
   font-weight: 400; }
 @font-face {
@@ -31,8 +31,8 @@
   src: url("fonts/ralewayregular.woff"), url("fonts/ralewayregular.woff2");
   font-weight: 400; }
 @font-face {
-  font-family: 'Raleway - Heavy';
-  src: url("fonts/ralewayblack.woff"), url("fonts/ralewayblack.woff2");
+  font-family: 'Raleway-Heavy';
+  src: url("/fonts/ralewayblack.woff"), url("fonts/ralewayblack.woff2");
   font-weight: 400; }
 /*-----------------------Normalize------------------------*/
 * {
@@ -155,7 +155,7 @@ body {
     font-family: "Lato", arial, sans-serif;
     text-transform: none; }
   .sect-title__main {
-    font-family: "Raleway - Extra Bold", arial, sans-serif;
+    font-family: "Raleway-Extra Bold", arial, sans-serif;
     font-weight: 400;
     display: inline-block;
     padding-right: 20px; }
@@ -281,7 +281,7 @@ body {
       margin-right: 10px;
       vertical-align: middle; }
     .header__logo-name {
-      font-family: "Helvetica Neue LT Std - Hv", arial, sans-serif;
+      font-family: "Helvetica Neue LT Std-Hv", arial, sans-serif;
       color: #656973;
       font-size: 15px;
       font-weight: 400;
@@ -381,14 +381,14 @@ body {
       height: 95px;
       left: 0; }
   .head__title {
-    font-family: "Raleway - Heavy", arial, sans-serif;
+    font-family: "Raleway-Heavy", arial, sans-serif;
     font-size: 72px;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 55px;
     margin-bottom: 13px; }
   .head__subtitle {
-    font-family: "Raleway - Extra Bold", arial, sans-serif;
+    font-family: "Raleway-Extra Bold", arial, sans-serif;
     font-size: 24px;
     letter-spacing: 0.6px;
     line-height: 35px; }
@@ -448,7 +448,7 @@ body {
     padding-left: 280px; }
   .advantages__numbers {
     color: #ffffff;
-    font-family: "Lato - Black", arial, sans-serif;
+    font-family: "Lato-Black", arial, sans-serif;
     font-size: 72px;
     font-weight: 400;
     text-transform: uppercase;
@@ -615,7 +615,7 @@ body {
       left: 0;
       height: 40px; }
   .res-slider__name {
-    font-family: "Raleway - Extra Bold", arial, sans-serif; }
+    font-family: "Raleway-Extra Bold", arial, sans-serif; }
   .res-slider__age {
     font-family: "Lato", arial, sans-serif;
     font-weight: 300;
@@ -654,7 +654,7 @@ body {
     text-align: center; }
   .reviews__text {
     color: #a9a9a9;
-    font-family: "Lato - Light Italic", arial, sans-serif;
+    font-family: "Lato-Light Italic", arial, sans-serif;
     font-style: italic;
     font-weight: 400;
     line-height: 22px;
@@ -722,7 +722,7 @@ body {
     .ingredients__table-title h3 {
       justify-self: start;
       color: #333740;
-      font-family: "Lato - Black", arial, sans-serif;
+      font-family: "Lato-Black", arial, sans-serif;
       font-size: 24px;
       font-weight: 400;
       line-height: 22px;
@@ -737,7 +737,7 @@ body {
     text-align: right; }
   .ingredients__caption-per {
     display: block;
-    font-family: "Lato - Black", arial, sans-serif;
+    font-family: "Lato-Black", arial, sans-serif;
     font-weight: 400; }
   .ingredients__caption-gr {
     display: block;
@@ -963,7 +963,7 @@ body {
       color: #ababab;
       opacity: 1;
       transition: opacity 0.1s ease;
-      font-family: "Lato", arial, sans-serif; }
+      font-family: 'Lato'; }
     .subscribing__input:focus::placeholder {
       opacity: 0; }
 

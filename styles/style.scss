@@ -4,12 +4,12 @@
   font-weight: 400;
 }
 @font-face{
-  font-family: 'Helvetica Neue LT Std - Hv';
+  font-family: 'Helvetica Neue LT Std-Hv';
   src: url('fonts/HelveticaNeueLTStd-Hv.woff'), url('fonts/HelveticaNeueLTStd-Hv.woff2');
   font-weight: 400;
 }
 @font-face{
-  font-family: 'Lato - Black';
+  font-family: 'Lato-Black';
   src: url('fonts/Lato-Black.woff'), url('fonts/Lato-Black.woff2');
   font-weight: 400;
 }
@@ -24,12 +24,12 @@
   font-weight: 400;
 }
 @font-face{
-  font-family: "Lato - Light Italic";
+  font-family: "Lato-Light Italic";
   src: url('fonts/latolightitalic.woff'), url('fonts/latolightitalic.woff2');
   font-weight: 400;
 }
 @font-face{
-  font-family: 'Raleway - Extra Bold';
+  font-family: 'Raleway-Extra Bold';
   src: url('fonts/raleway-extraboldall.woff'), url('fonts/raleway-extraboldall.woff2');
   font-weight: 400;
 }
@@ -39,8 +39,8 @@
   font-weight: 400;
 }
 @font-face{
-  font-family: 'Raleway - Heavy';
-  src: url('fonts/ralewayblack.woff'), url('fonts/ralewayblack.woff2');
+  font-family: 'Raleway-Heavy';
+  src: url('/fonts/ralewayblack.woff'), url('fonts/ralewayblack.woff2');
   font-weight: 400;
 }
 
@@ -179,7 +179,7 @@ body {
     text-transform: none;
   }
   &__main {
-    font-family: "Raleway - Extra Bold", $commonFont;
+    font-family: "Raleway-Extra Bold", $commonFont;
     font-weight: 400;
     display: inline-block;
     padding-right: 20px;
@@ -335,7 +335,7 @@ body {
       vertical-align: middle;
     }
     &-name {
-      font-family: "Helvetica Neue LT Std - Hv", arial, sans-serif;
+      font-family: "Helvetica Neue LT Std-Hv", arial, sans-serif;
       color: #656973;
       font-size: 15px;
       font-weight: 400;
@@ -461,7 +461,7 @@ body {
     }
   }
   &__title {
-    font-family: "Raleway - Heavy", $commonFont;
+    font-family: "Raleway-Heavy", $commonFont;
     font-size: 72px;
     font-weight: 400;
     text-transform: uppercase;
@@ -469,7 +469,7 @@ body {
     margin-bottom: 13px;
   }
   &__subtitle {
-    font-family: "Raleway - Extra Bold", $commonFont;
+    font-family: "Raleway-Extra Bold", $commonFont;
     font-size: 24px;
     letter-spacing: 0.6px;
     line-height: 35px;
@@ -541,7 +541,7 @@ body {
   }
   &__numbers {
     color: #ffffff;
-    font-family: "Lato - Black", $commonFont;
+    font-family: "Lato-Black", $commonFont;
     font-size: 72px;
     font-weight: 400;
     text-transform: uppercase;
@@ -753,7 +753,7 @@ body {
     }
   }
   &__name {
-    font-family: "Raleway - Extra Bold", $commonFont;
+    font-family: "Raleway-Extra Bold", $commonFont;
   }
   &__age {
     font-family: "Lato", $commonFont;
@@ -801,7 +801,7 @@ body {
   }
   &__text {
     color: #a9a9a9;
-    font-family: "Lato - Light Italic", $commonFont;
+    font-family: "Lato-Light Italic", $commonFont;
     font-style: italic;
     font-weight: 400;
     line-height: 22px;
@@ -890,7 +890,7 @@ body {
     & h3 {
       justify-self: start;
       color: $mainTextColor;
-      font-family: "Lato - Black", $commonFont;
+      font-family: "Lato-Black", $commonFont;
       font-size: 24px;
       font-weight: 400;
       line-height: 22px;
@@ -909,7 +909,7 @@ body {
   }
   &__caption-per {
     display: block;
-    font-family: "Lato - Black", $commonFont;
+    font-family: "Lato-Black", $commonFont;
     font-weight: 400;
   }
   &__caption-gr {
@@ -1204,7 +1204,7 @@ body {
       color: #ababab;
       opacity: 1;
       transition: opacity 0.1s ease;
-      font-family: 'Lato', $commonFont;
+      font-family: 'Lato';
     }
     &:focus::placeholder {
       opacity: 0;
