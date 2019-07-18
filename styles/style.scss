@@ -776,6 +776,7 @@ body {
       background-image: linear-gradient(to left, #0f0816 0%, rgba(15, 8, 22,0.8) 95%, transparent 100%);
       top: 0;
       right: 0;
+      z-index: 1;
     }
   }
   &__title {
@@ -790,6 +791,7 @@ body {
 .reviews {
   max-width: 735px;
   margin: 0 auto;
+  z-index: 2;
   &__item {
     display: grid;
     grid-template-rows: 62px 73px;
@@ -1023,6 +1025,7 @@ body {
     letter-spacing: 0.4px;
   }
 }
+
 .certifications {
   background-color: #f1f4f5;
   &__wrap {
@@ -1077,5 +1080,56 @@ body {
       height: 104px;
       background: #b4c5ca;
     }
+  }
+}
+
+.supplement {
+  &__wrap {
+    padding-top: 120px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-template-rows: 489px;
+    grid-gap: 40px;
+  }
+  &__left {
+    position: relative;
+    & img {
+      position: absolute;
+      left: -100px;
+    }
+  }
+  &__right {
+    padding-top: 79px;
+  }
+  &__title {
+    padding-left: 35px;
+    margin-bottom: 13px;
+    text-align: left;
+    &::before {
+      left: 0;
+      width: 5px;
+      height: 40px;
+      top: 3px;
+    }
+  }
+  &__price {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+    padding-left: 30px;
+  }
+  &__text {
+    color: $paragraffColor;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin-bottom: 40px;
+  }
+  &__order {
+    width: 181px;
   }
 }
