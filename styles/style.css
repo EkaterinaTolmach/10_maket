@@ -110,6 +110,7 @@ body {
 
 .btn {
   display: block;
+  font-family: "Lato", arial, sans-serif;
   background: #18a3dd;
   color: #f1f1f1;
   height: 50px;
@@ -660,7 +661,7 @@ body {
     letter-spacing: 0.4px; }
   .reviews__client {
     display: grid;
-    grid-template-columns: 65px 125px;
+    grid-template-columns: 65px 131px;
     grid-gap: 30px;
     margin: 0 auto; }
   .reviews__img {
@@ -961,6 +962,43 @@ body {
     .subscribing__input::placeholder {
       color: #ababab;
       opacity: 1;
-      transition: opacity 0.1s; }
+      transition: opacity 0.1s ease;
+      font-family: "Lato", arial, sans-serif; }
     .subscribing__input:focus::placeholder {
       opacity: 0; }
+
+.issues__wrap {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+.issues__title::after {
+  content: "We're always happy to reply our customers."; }
+.issues__form {
+  max-width: 555px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 35px) 100px;
+  grid-gap: 40px; }
+.issues__input {
+  background: transparent;
+  border-bottom: 1px solid #ebebeb;
+  outline: none;
+  transition: border-color 0.2s ease; }
+  .issues__input::placeholder {
+    color: #ababab;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    font-family: "Lato", arial, sans-serif; }
+  .issues__input:focus {
+    border-bottom: 1px solid #18a3dd; }
+  .issues__input--full {
+    grid-column-start: 1;
+    grid-column-end: 3; }
+  .issues__input--textarea {
+    resize: none; }
+.issues__submit {
+  width: 225px;
+  margin: 0 auto;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 10px; }

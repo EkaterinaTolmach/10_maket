@@ -131,6 +131,7 @@ body {
 }
 .btn {
   display: block;
+  font-family: 'Lato', $commonFont;
   background: $brightColor;
   color: #f1f1f1;
   height: 50px;
@@ -808,7 +809,7 @@ body {
   }
   &__client {
     display: grid;
-    grid-template-columns: 65px 125px;
+    grid-template-columns: 65px 131px;
     grid-gap: 30px;
     margin: 0 auto;
   }
@@ -1203,9 +1204,60 @@ body {
       color: #ababab;
       opacity: 1;
       transition: opacity 0.1s ease;
+      font-family: 'Lato', $commonFont;
     }
     &:focus::placeholder {
       opacity: 0;
     }
+  }
+}
+
+.issues {
+  &__wrap {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  &__title {
+    &::after {
+      content: "We're always happy to reply our customers.";
+    }
+
+  }
+  &__form {
+    max-width: 555px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 35px) 100px;
+    grid-gap: 40px
+  }
+  &__input {
+    background: transparent;
+    border-bottom: 1px solid #ebebeb;
+    outline: none;
+    transition: border-color 0.2s ease;
+    &::placeholder {
+      color: #ababab;
+      font-weight: 300;
+      letter-spacing: 0.4px;
+      font-family: 'Lato', $commonFont;
+    }
+    &:focus {
+      border-bottom: 1px solid $brightColor;
+    }
+    &--full {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    &--textarea {
+      resize: none;
+    }
+  }
+  &__submit {
+    width: 225px;
+    margin: 0 auto;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-top: 10px;
   }
 }
