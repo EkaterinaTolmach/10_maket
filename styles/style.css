@@ -950,3 +950,17 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 150px; }
+  .subscribing__submit {
+    border-radius: 0;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px; }
+  .subscribing__input {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    padding-left: 30px; }
+    .subscribing__input::placeholder {
+      color: #ababab;
+      opacity: 1;
+      transition: opacity 0.1s; }
+    .subscribing__input:focus::placeholder {
+      opacity: 0; }

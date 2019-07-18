@@ -1190,4 +1190,22 @@ body {
     display: grid;
     grid-template-columns: 1fr 150px;
   }
+  &__submit {
+    border-radius: 0;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  &__input {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    padding-left: 30px;
+    &::placeholder {
+      color: #ababab;
+      opacity: 1;
+      transition: opacity 0.1s ease;
+    }
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
 }
