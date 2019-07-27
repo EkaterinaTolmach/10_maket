@@ -100,4 +100,9 @@ $(document).ready(function() {
         $('.js-modal, #js-overlay').fadeOut();
         $('body.open-modal').removeClass("open-modal");
     });
+
+    /*********************Counter-up numbers********************/
+    $('.js-counter').counterUp({
+        time: 2000
+    });
 });
