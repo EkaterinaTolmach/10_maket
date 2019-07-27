@@ -71,4 +71,13 @@ $(document).ready(function() {
             console.log(name);
         })
     }
+
+    /*************Open Menu*****************/
+    $('#js-open-menu').on('click', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.js-burger-menu').slideToggle();
+    })
+
+    
 });
