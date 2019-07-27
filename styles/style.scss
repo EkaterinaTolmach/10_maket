@@ -1253,3 +1253,105 @@ body {
     margin-top: 10px;
   }
 }
+
+.footer {
+  background-color: rgb(241, 244, 245);
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 40px 0;
+  }
+  &__info {
+    justify-self: start;
+  }
+  &__copy {
+    color: $paragraffColor;
+  }
+  &__menu {
+    margin-top: 20px;
+  }
+  &__menu-list {
+    display: grid;
+    width: 255px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+  &__menu-item {
+    border-right: 1px solid rgb(217, 217, 217);
+    & a {
+      color: $paragraffColor;
+      padding: 0 10px;
+      transition: color 0.1s ease;
+    }
+    &:first-child a {
+      padding-left: 0;
+    }
+    &:last-child {
+      border-right: none;
+      & a {
+        padding-right: 0;
+      }
+    }
+    &:hover a {
+      color: $brightColor;
+    }
+  }
+  &__social {
+    justify-self: end;
+  }
+}
+.social {
+  width: 250px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+  }
+  &__item {
+
+  }
+  &__link {
+    padding: 0 10px;
+    display: block;
+    & svg {
+      fill: rgb(102, 102, 102);
+      transition: fill 0.1s ease;
+    }
+    &--fc {
+      & svg {
+        width: 20px;
+        height: 40px;      }
+      &:hover svg {
+        fill: #3d5a98;
+      }
+    }
+    &--tw {
+      & svg {
+        width: 27px;
+        height: 22px;
+      }
+      &:hover svg {
+        fill: #41abe1;
+      }
+    }
+    &--yu {
+      & svg {
+        width: 27px;
+        height: 21px;
+      }
+      &:hover svg {
+        fill: #ff0000;
+      }
+    }
+    &--dr {
+      & svg {
+        width: 21px;
+        height: 21px;
+      }
+      &:hover svg {
+        fill: #ea4c89;
+      }
+    }
+  }
+}
