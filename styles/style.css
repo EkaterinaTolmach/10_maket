@@ -667,7 +667,9 @@ body {
   .reviews__img {
     width: 65px;
     height: 73px;
-    overflow: hidden; }
+    overflow: hidden;
+    clip-path: url(#smallHex);
+    -webkit-clip-path: url(#smallHex); }
   .reviews__info {
     text-align: left; }
     .reviews__info.border::before {
@@ -798,8 +800,8 @@ body {
   width: 103px;
   height: 116px;
   overflow: hidden;
-  clip-path: url(#myPath);
-  -webkit-clip-path: url(#myPath); }
+  clip-path: url(#bigHex);
+  -webkit-clip-path: url(#bigHex); }
 .description__title {
   padding-left: 20px;
   margin: 50px 0 20px 0; }

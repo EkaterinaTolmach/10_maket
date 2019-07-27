@@ -817,6 +817,8 @@ body {
     width: 65px;
     height: 73px;
     overflow: hidden;
+    clip-path: url(#smallHex);
+    -webkit-clip-path: url(#smallHex);
   }
   &__info {
     text-align: left;
@@ -984,8 +986,8 @@ body {
     width: 103px;
     height: 116px;
     overflow: hidden;
-    clip-path: url(#myPath);
-    -webkit-clip-path: url(#myPath);
+    clip-path: url(#bigHex);
+    -webkit-clip-path: url(#bigHex);
   }
   &__title {
     padding-left: 20px;
