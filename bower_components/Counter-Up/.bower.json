@@ -1,0 +1,13 @@
+{
+  "name": "Counter-Up",
+  "_cacheHeaders": {
+    "ETag": "W/\"0dae12a704cf88d774b17d8825fed52f\"",
+    "Content-Type": "text/html; charset=utf-8"
+  },
+  "_release": "e-tag:W/\"0dae12a",
+  "main": "index",
+  "_source": "https://github.com/bfintal/Counter-Up",
+  "_target": "*",
+  "_originalSource": "https://github.com/bfintal/Counter-Up",
+  "_direct": true
+}
