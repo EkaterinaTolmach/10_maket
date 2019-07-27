@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'HelveticaNeueLT Std Med';
   src: url("fonts/Helvetica-Neue-LT-Std-65-Medium.woff"), url("fonts/Helvetica-Neue-LT-Std-65-Medium.woff2");
@@ -287,6 +288,47 @@ body {
   display: none; }
   .modal__video {
     width: 100%; }
+
+/*╨б╤В╨╕╨╗╨╕ ╨┤╨╗╤П ╨░╨╜╨╕╨╝╨░╤Ж╨╕╨╕*/
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0); } }
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight; }
 
 /************PAGE STYLES*************/
 .header {
