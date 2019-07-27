@@ -1,5 +1,13 @@
+function goToSection(event) {
+    event.preventDefault();
+    var link = $(this).attr('href').slice(1),
+        section = $('#'+link);
+    var offsetSection = section.offset().top;
+    $("html, body").animate({
+        scrollTop: offsetSection
+    },1000);
+}
 $(document).ready(function() {
-
 /************Sliders**************/
     var prevArrow ='<a href="#" class="results__nav-prev">\n' +
         '                        <svg\n' +
@@ -79,5 +87,17 @@ $(document).ready(function() {
         $('.js-burger-menu').slideToggle();
     })
 
-    
+    /**********Scroll***********/
+    $('.menu__link').on('click', goToSection);
+
+    /*********Modal**********/
+    $('#js-show-video').on('click', function (e) {
+        e.preventDefault();
+        $('.js-modal, #js-overlay').fadeIn();
+        $('body').addClass("open-modal");
+    });
+    $('#js-overlay').on('click', function () {
+        $('.js-modal, #js-overlay').fadeOut();
+        $('body.open-modal').removeClass("open-modal");
+    });
 });
