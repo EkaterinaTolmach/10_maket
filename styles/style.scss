@@ -354,12 +354,19 @@ body {
     display: block;
     width: 35px;
     height: 29px;
-    //position: relative;
     &:hover .menu__burger-line{
       width: 18px;
     }
     &:hover .menu__burger-line::before{
       width: 25px;
+    }
+    &.active {
+      & .menu__burger-line {
+        width: 18px;
+      }
+      & .menu__burger-line::before{
+        width: 25px;
+      }
     }
   }
   &__list {
@@ -375,7 +382,6 @@ body {
   }
   &__item {
     text-transform: uppercase;
-    //border-right: 1px solid $brightColor;
   }
   &__link {
     color: $mainTextColor;

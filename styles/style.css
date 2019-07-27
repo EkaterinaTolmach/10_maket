@@ -299,6 +299,10 @@ body {
     width: 18px; }
   .menu__btn:hover .menu__burger-line::before {
     width: 25px; }
+  .menu__btn.active .menu__burger-line {
+    width: 18px; }
+  .menu__btn.active .menu__burger-line::before {
+    width: 25px; }
 .menu__list {
   display: none;
   position: absolute;
