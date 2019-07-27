@@ -115,6 +115,7 @@ $mainTextColor: #333740;
 $commonFont: arial, sans-serif;
 $paragraffColor: #666666;
 $backgroundColor: #fafcfc;
+$darkBackgroundColor: #f1f4f5;
 
 
 /***************COMMON STYLES******************/
@@ -452,7 +453,7 @@ body {
   &__list {
     display: none;
     position: absolute;
-    background: #fafcfc;
+    background: $backgroundColor;
     width: 300px;
     right: 0;
     padding: 10px;
@@ -480,7 +481,7 @@ body {
     display: block;
     width: 35px;
     height: 6px;
-    background-color: #666666;
+    background-color: $paragraffColor;
     transition: width 0.2s ease-in-out;
     border-radius: 2px;
     &::after {
@@ -488,7 +489,7 @@ body {
       content: "";
       width: 35px;
       height: 6px;
-      background-color: #666666;
+      background-color: $paragraffColor;
       transform: translateY(19px);
       border-radius: 2px;
     }
@@ -497,7 +498,7 @@ body {
       content: "";
       width: 35px;
       height: 6px;
-      background-color: #666666;
+      background-color: $paragraffColor;
       transform: translateY(12.5px);
       transition: width 0.2s ease-in-out;
       border-radius: 2px;
@@ -1103,7 +1104,7 @@ body {
     padding-right: 3px;
   }
   &__text {
-    color: #666666;
+    color: $paragraffColor;
     line-height: 24px;
     font-family: "Lato Light", $commonFont;
     font-weight: 300;
@@ -1112,7 +1113,7 @@ body {
 }
 
 .certifications {
-  background-color: #f1f4f5;
+  background-color: $darkBackgroundColor;
   &__wrap {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -1343,7 +1344,7 @@ body {
 }
 
 .footer {
-  background-color: rgb(241, 244, 245);
+  background-color: $darkBackgroundColor;
   &__wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1403,7 +1404,7 @@ body {
     padding: 0 10px;
     display: block;
     & svg {
-      fill: rgb(102, 102, 102);
+      fill: $paragraffColor;
       transition: fill 0.1s ease;
     }
     &--fc {
