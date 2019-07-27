@@ -101,7 +101,7 @@ $(document).ready(function() {
         $('body.open-modal').removeClass("open-modal");
     });
 
-    /*********************Counter-up numbers********************/
+    /*********************Counter-up numbers https://github.com/bfintal/Counter-Up********************/
     $('.js-counter').counterUp({
         time: 2000
     });
