@@ -865,18 +865,12 @@ body {
 }
 .ingredients {
   display: grid;
-  //grid-template-columns: repeat(2, 2fr);
   grid-template-columns: 490px 1fr;
   grid-template-rows: 1fr 50px;
   grid-column-gap: 100px;
   grid-row-gap: 50px;
   max-width: 955px;
   margin: 0 auto;
-  &__table {
-    //max-width: 490px;
-    //margin: 0 auto;
-    //min-width: 490px;
-  }
   &__table-title {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -937,6 +931,8 @@ body {
       background-color: #ffffff;
       padding: 10px;
       width: 100%;
+      position: relative;
+      top: -1px;
     }
     &:hover .ingredients__name, &:hover .ingredients__value {
       color: $brightColor;
@@ -1162,17 +1158,6 @@ body {
   &__wrap {
     padding-top: 95px;
     padding-bottom: 85px;
-    //&::after {
-    //  position: absolute;
-    //  display: block;
-    //  content: "";
-    //  width: 30%;
-    //  height: 100%;
-    //  background-image: linear-gradient(to left, #0f0816 0%, rgba(15, 8, 22,0.8) 95%, transparent 100%);
-    //  top: 0;
-    //  right: 0;
-    //  z-index: 1;
-    //}
   }
   &__title {
     margin-bottom: 76px;
@@ -1236,14 +1221,21 @@ body {
     border-bottom: 1px solid #ebebeb;
     outline: none;
     transition: border-color 0.2s ease;
+    font-family: 'Lato', $commonFont;
+    color: #ababab;
     &::placeholder {
       color: #ababab;
       font-weight: 300;
       letter-spacing: 0.4px;
       font-family: 'Lato', $commonFont;
+      opacity: 1;
+      transition: opacity 0.1s ease;
     }
     &:focus {
       border-bottom: 1px solid $brightColor;
+      &::placeholder {
+        opacity: 0;
+      }
     }
     &--full {
       grid-column-start: 1;

@@ -759,7 +759,9 @@ body {
       border: 1px solid #d7d7d7;
       background-color: #ffffff;
       padding: 10px;
-      width: 100%; }
+      width: 100%;
+      position: relative;
+      top: -1px; }
     .ingredients__title:hover .ingredients__name, .ingredients__title:hover .ingredients__value {
       color: #18a3dd; }
   .ingredients__name {
@@ -983,14 +985,20 @@ body {
   background: transparent;
   border-bottom: 1px solid #ebebeb;
   outline: none;
-  transition: border-color 0.2s ease; }
+  transition: border-color 0.2s ease;
+  font-family: "Lato", arial, sans-serif;
+  color: #ababab; }
   .issues__input::placeholder {
     color: #ababab;
     font-weight: 300;
     letter-spacing: 0.4px;
-    font-family: "Lato", arial, sans-serif; }
+    font-family: "Lato", arial, sans-serif;
+    opacity: 1;
+    transition: opacity 0.1s ease; }
   .issues__input:focus {
     border-bottom: 1px solid #18a3dd; }
+    .issues__input:focus::placeholder {
+      opacity: 0; }
   .issues__input--full {
     grid-column-start: 1;
     grid-column-end: 3; }
