@@ -88,7 +88,7 @@ $(document).ready(function() {
     })
 
     /**********Scroll***********/
-    $('.menu__link').on('click', goToSection);
+    $('.js-scroll').on('click', goToSection);
 
     /*********Modal**********/
     $('#js-show-video').on('click', function (e) {
@@ -105,4 +105,15 @@ $(document).ready(function() {
     $('.js-counter').counterUp({
         time: 2000
     });
+
+    /*********************Wow********************/
+    var wow = new WOW(
+        {
+            boxClass:     'wow',      // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset:       150,          // distance to the element when triggering the animation (default is 0)
+            mobile:       false
+        }
+    );
+    wow.init();
 });
