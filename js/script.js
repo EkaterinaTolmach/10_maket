@@ -52,6 +52,7 @@ $(document).ready(function() {
             cssEase: 'linear',
             dots: false,
             slidesToShow: 5,
+            slidesToScroll: 1,
         });
     }
     /************END Sliders****************/
@@ -93,7 +94,7 @@ $(document).ready(function() {
     /*********Modal**********/
     $('#js-show-video').on('click', function (e) {
         e.preventDefault();
-        $('.js-modal, #js-overlay').fadeIn();
+        $('.js-modal.video-block, #js-overlay').fadeIn();
         $('body').addClass("open-modal");
     });
     $('#js-overlay').on('click', function () {
@@ -116,4 +117,54 @@ $(document).ready(function() {
         }
     );
     wow.init();
+
+    /*****************Form validation********************/
+    $(".subscribing__form").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            email: {
+                required: "Please enter your email",
+                email: "Invalid email"
+            },
+        },
+        focusCleanup: true, //убирает сообщение об ошибке в активном поле
+        focusInvalid: false, //ставит фокус на первое поле ввода
+        submitHandler: function () {
+            $('#js-form-success-modal').fadeIn();
+            $('#js-overlay').fadeIn();
+        }
+    });
+    $(".issues__form").validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 3
+            },
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            name: {
+                required: "Please enter your name",
+                minlength: "Minimum 3 letters"
+            },
+            email: {
+                required: "Please enter your email",
+                email: "Invalid email"
+            },
+        },
+        focusCleanup: true, //убирает сообщение об ошибке в активном поле
+        focusInvalid: false, //ставит фокус на первое поле ввода
+        submitHandler: function () {
+            $('#js-form-success-modal').fadeIn();
+            $('#js-overlay').fadeIn();
+        }
+    });
 });
