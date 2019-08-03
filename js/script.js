@@ -167,4 +167,11 @@ $(document).ready(function() {
             $('#js-overlay').fadeIn();
         }
     });
+
+    $(document).mouseup(function (e){
+        var div = $(".js-burger-menu");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+            div.fadeOut();
+        }
+    });
 });
