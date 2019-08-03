@@ -33,7 +33,7 @@
   font-weight: 400; }
 @font-face {
   font-family: 'Raleway-Heavy';
-  src: url("/fonts/ralewayblack.woff"), url("fonts/ralewayblack.woff2");
+  src: url("fonts/ralewayblack.woff"), url("fonts/ralewayblack.woff2");
   font-weight: 400; }
 /*-----------------------Normalize------------------------*/
 * {
@@ -278,16 +278,30 @@ body {
   display: none; }
 
 .modal {
-  width: 900px;
   padding: 20px;
-  background: #333740;
   position: fixed;
-  top: 100px;
-  left: calc(50% - 450px);
   z-index: 1000;
   display: none; }
-  .modal__video {
-    width: 100%; }
+  .modal.video-block {
+    width: 900px;
+    background: #333740;
+    left: calc(50% - 450px);
+    top: 100px; }
+    .modal.video-block__video {
+      width: 100%; }
+  .modal.form-success {
+    width: 350px;
+    background: #fafcfc;
+    left: calc(50% - 200px);
+    top: 250px; }
+    .modal.form-success__text {
+      text-align: center; }
+
+.video-block__video {
+  width: 100%; }
+
+.form-success__text {
+  text-align: center; }
 
 /*╨б╤В╨╕╨╗╨╕ ╨┤╨╗╤П ╨░╨╜╨╕╨╝╨░╤Ж╨╕╨╕*/
 .animated {
@@ -916,7 +930,6 @@ body {
       padding: 0; }
 
 .cert-slider {
-  width: 969px;
   margin: 0 auto; }
   .cert-slider__item {
     width: 193px;
@@ -1009,6 +1022,11 @@ body {
 .subscribing {
   background: #000000 url("../images/bckg_02.jpg") no-repeat center center;
   position: relative; }
+  .subscribing label.error {
+    position: absolute;
+    color: red;
+    top: 0;
+    padding-left: 40px; }
   .subscribing__wrap {
     padding-top: 95px;
     padding-bottom: 85px; }
@@ -1025,7 +1043,8 @@ body {
     z-index: 2;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 150px; }
+    grid-template-columns: 1fr 150px;
+    position: relative; }
   .subscribing__submit {
     border-radius: 0;
     border-bottom-right-radius: 25px;
@@ -1038,13 +1057,18 @@ body {
       color: #ababab;
       opacity: 1;
       transition: opacity 0.1s ease;
-      font-family: 'Lato'; }
+      font-family: "Lato" arial, sans-serif; }
     .subscribing__input:focus::placeholder {
       opacity: 0; }
 
 .issues__wrap {
   padding-top: 120px;
   padding-bottom: 120px; }
+.issues label.error {
+  position: absolute;
+  color: red;
+  top: -17px;
+  left: 0; }
 .issues__title::after {
   content: "We're always happy to reply our customers."; }
 .issues__form {
@@ -1054,13 +1078,17 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 35px) 100px;
   grid-gap: 40px; }
+.issues__item {
+  position: relative; }
 .issues__input {
   background: transparent;
   border-bottom: 1px solid #ebebeb;
   outline: none;
   transition: border-color 0.2s ease;
   font-family: "Lato", arial, sans-serif;
-  color: #ababab; }
+  color: #ababab;
+  width: 100%;
+  height: 100%; }
   .issues__input::placeholder {
     color: #ababab;
     font-weight: 300;
