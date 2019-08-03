@@ -590,11 +590,15 @@
                     <span class="sect-title__sub">Your Issue</span>
                 </h2>
                 <form action="#" method="post" enctype="text/plain" class="issues__form">
-                    <input class="issues__input" type="text" name="name" placeholder="Name">
-                    <input class="issues__input" type="email" name="email" placeholder="Email">
+                    <div class="issues__item">
+                        <input class="issues__input" type="text" name="name" placeholder="Name">
+                    </div>
+                    <div class="issues__item">
+                        <input class="issues__input" type="email" name="email" placeholder="Email">
+                    </div>
                     <input class="issues__input issues__input--full" type="text" name="subject" placeholder="Subject">
                     <textarea class="issues__input issues__input--full issues__input--textarea" name="question"></textarea>
-                    <button type="reset" class="issues__submit btn">Send</button>
+                    <button type="submit" class="issues__submit btn">Send</button>
                 </form>
             </div>
         </section>
@@ -714,16 +718,25 @@
         </svg>
         <svg>
             <clipPath id="smallHex">
-                <path
-                        d="M64.996,51.454 C64.996,53.510 63.533,56.034 61.746,57.062 L35.750,72.017 C33.962,73.045 31.038,73.045 29.250,72.017 L3.254,57.062 C1.467,56.034 0.004,53.510 0.004,51.454 L0.004,21.545 C0.004,19.489 1.467,16.965 3.254,15.937 L29.250,0.982 C31.038,-0.046 33.962,-0.046 35.750,0.982 L61.746,15.937 C63.533,16.965 64.996,19.489 64.996,21.545 L64.996,51.454 Z"/>
+                <path d="M64.996,51.454 C64.996,53.510 63.533,56.034 61.746,57.062 L35.750,72.017
+                C33.962,73.045 31.038,73.045 29.250,72.017 L3.254,57.062 C1.467,56.034 0.004,53.510 0.004,51.454
+                L0.004,21.545 C0.004,19.489 1.467,16.965 3.254,15.937 L29.250,0.982 C31.038,-0.046 33.962,-0.046
+                35.750,0.982 L61.746,15.937 C63.533,16.965 64.996,19.489 64.996,21.545 L64.996,51.454 Z"/>
             </clipPath>
         </svg>
     </div>
     <!-- Modals -->
     <div class="overlay" id="js-overlay"></div>
-    <div class="modal js-modal" id="js-video-modal">
-        <div class="modal__wrap">
-            <video class="modal__video" src="video/html_5css_3.mov" controls></video>
+    <div class="modal video-block js-modal" id="js-video-modal">
+        <div class="video-block__wrap">
+            <video class="video-block__video" src="video/html_5css_3.mov" controls></video>
+        </div>
+    </div>
+    <div class="modal form-success js-modal" id="js-form-success-modal">
+        <div class="form-success__wrap">
+            <p class="form-success__text" >
+                Thank you! We will contact you soon!
+            </p>
         </div>
     </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -731,6 +744,7 @@
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="bower_components/Counter-Up/jquery.counterup.min.js"></script>
     <script src="bower_components/wow/dist/wow.min.js"></script>
+    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
