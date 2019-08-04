@@ -605,13 +605,13 @@ body {
     border: 3px solid $backgroundColor;
     line-height: 46px;
     width: 200px;
-    background: url('../images/play_video.png') no-repeat 168px center, transparent;
+    background: url('../images/play_video.png') no-repeat 170px center, transparent;
     text-align: left;
     font-weight: 700;
     padding: 0 10px;
     &:hover {
       border-color: $brightColor;
-      background: url('../images/play_video.png') no-repeat 168px center, transparent;
+      background: url('../images/play_video.png') no-repeat 170px center, transparent;
     }
   }
   &__right {
@@ -908,7 +908,7 @@ body {
   z-index: 2;
   &__item {
     display: grid;
-    grid-template-rows: 62px 73px;
+    grid-template-rows: 1fr 73px;
     grid-gap: 32px;
     text-align: center;
   }
@@ -993,7 +993,7 @@ body {
     align-items: center;
     border-bottom: 5px solid $mainTextColor;
     padding-bottom: 15px;
-    width: 457px;
+    max-width: 457px;
     margin: 0 auto;
 
     & h3 {
@@ -1026,7 +1026,7 @@ body {
     font-weight: 300;
   }
   &__title {
-    width: 457px;
+    max-width: 457px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 40px;
@@ -1052,7 +1052,13 @@ body {
     &:hover .ingredients__name, &:hover .ingredients__value {
       color: $brightColor;
     }
-
+    &--accordeon-btn {
+      display: none;
+      &.open .ingredients__name,
+      &.open .ingredients__value{
+        color: $brightColor;
+      }
+    }
   }
   &__name {
     text-align: left;
@@ -1069,6 +1075,7 @@ body {
     max-width: 365px;
     &--inline {
       display: none;
+      padding: 20px 0;
     }
   }
   &__download {
@@ -1226,9 +1233,12 @@ body {
   }
   &__left {
     position: relative;
+  }
+  &__pict {
+    position: absolute;
+    left: -115px;
     & img {
-      position: absolute;
-      left: -115px;
+      width: 100%;
     }
   }
   &__right {
@@ -1341,7 +1351,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 35px) 100px;
+    grid-template-rows: repeat(2, 35px) 100px 50px;
     grid-gap: 40px;
   }
   &__item {
@@ -1393,7 +1403,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   &__info {
     justify-self: start;
@@ -1488,6 +1499,8 @@ body {
     }
   }
 }
+
+
 @media all and (max-width: 1170px) {
   .advantages {
     &__wrap {
@@ -1503,6 +1516,9 @@ body {
   }
   .results__nav {
     padding: 0 10px;
+  }
+  .testimonials__wrap::after {
+    display: none;
   }
 }
 @media all and (max-width: 1115px) {
@@ -1547,10 +1563,53 @@ body {
   .results__nav {
     display: none;
   }
+  .supplement {
+    &__wrap {
+      padding-top: 70px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 489px;
+      max-width: 744px;
+    }
+    &__left {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    &__right {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      padding: 0;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    &__order {
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
 }
 @media all and (max-width: 868px) {
   .features__list {
     grid-template-columns: 1fr 350px 1fr;
+  }
+  .ingredients {
+    display: block;
+    &__description {
+      display: none;
+    }
+    &__list {
+      max-width: 457px;
+      margin: 0 auto;
+    }
+    &__download {
+      margin-top: 40px;
+    }
+    &__title {
+      display: none;
+      &--accordeon-btn {
+        display: grid;
+      }
+    }
   }
 }
 @media all and (max-width: 800px) {
@@ -1572,11 +1631,13 @@ body {
   }
 }
 @media all and (max-width: 768px) {
+  .main-width {
+    padding: 70px 20px;
+  }
+  .header {
+    padding: 25px 20px;
+  }
   .features {
-    &__wrap {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
     &__list {
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(2, 1fr);
@@ -1589,16 +1650,26 @@ body {
 }
 @media all and (max-width: 680px) {
   .advantages {
-    &__wrap {
-      padding-bottom: 70px;
-      padding-top: 70px;
-    }
     &__list {
       grid-template-columns: 1fr;
       padding-left: 0;
       grid-template-rows: repeat(3,1fr);
       grid-gap: 30px;
       width: 200px;
+    }
+  }
+  .subscribing__form {
+    width: 100%;
+  }
+  .footer {
+    &__wrap {
+      grid-template-columns: 1fr;
+      grid-template-rows: 60px 1fr;
+      grid-gap: 20px;
+    }
+    &__info,
+    &__social {
+      justify-self: center;
     }
   }
 }
@@ -1623,18 +1694,46 @@ body {
     padding-top: 30px;
   }
 }
+@media all and (max-width: 500px) {
+  .ingredients {
+    &__docs-link {
+      width: 100%;
+    }
+  }
+}
 @media all and (max-width: 480px) {
   .header {
     grid-template-columns: 1fr 40px;
+    &__nav {
+      position: static;
+    }
   }
   .menu__list {
-    width: 280px;
+    width: 100%;
+  }
+  .sect-title {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 17px;
+    &__main {
+      padding-right: 0;
+      &.border::before {
+        width: 40px;
+        right: 0;
+        height: 1px;
+        top: 32px;
+        left: calc(50% - 20px);
+      }
+    }
+    &__sub {
+      padding-left: 0;
+      //line-height: 29px;
+    }
+  }
+  .certifications__title {
+    display: block;
   }
   .features {
-    &__wrap {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
     &__list {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
@@ -1654,8 +1753,53 @@ body {
       text-align: left;
     }
   }
+  .testimonials {
+    background-size: cover;
+  }
   .res-slider__item {
     grid-template-rows: 318px 1fr;
+  }
+  .supplement {
+    &__wrap {
+      grid-template-rows: 1fr 380px;
+    }
+    &__order {
+      width: 100%;
+    }
+  }
+  .subscribing {
+    background-size: cover;
+    &__title::after {
+      bottom: -57px;
+    }
+    &__form {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: 30px;
+      background: none;
+      padding: 36px 0;
+    }
+    &__input {
+      border-radius: 25px;
+    }
+    &__submit {
+      border-radius: 25px;
+    }
+  }
+  .issues {
+    &__form {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 35px) 100px 50px;
+    }
+    &__input--full {
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+    &__submit {
+      width: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
   }
 }
 @media all and (max-width: 440px) {
@@ -1688,24 +1832,7 @@ body {
   }
 }
 @media all and (max-width: 394px) {
-  .sect-title {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 17px;
-    &__main {
-      padding-right: 0;
-      &.border::before {
-        width: 40px;
-        right: 0;
-        height: 1px;
-        top: 32px;
-        left: calc(50% - 20px);
-      }
-    }
-    &__sub {
-      padding-left: 0;
-    }
-  }
+
   .head {
     &__wrap {
       grid-template-rows: 418px 1fr;
@@ -1719,18 +1846,33 @@ body {
       top: 10%;
     }
   }
+  .ingredients__caption-per {
+    display: none;
+  }
+  .cert-slider__item {
+    border: none;
+  }
+  .supplement {
+    &::after {
+      display: none;
+
+    }
+    &__wrap {
+      display: block;
+    }
+    &__pict {
+      display: none;
+    }
+  }
 }
 @media all and (max-width: 320px) {
   .sect-title::after {
     bottom: -60px;
-  }
-  .results__wrap {
-    padding-top: 70px;
-    padding-bottom: 70px;
   }
   .res-slider {
     &__item {
       grid-template-rows: 203px 1fr;
     }
   }
+
 }
