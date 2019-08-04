@@ -86,7 +86,7 @@ $(document).ready(function() {
         event.preventDefault();
         $(this).toggleClass('active');
         $('.js-burger-menu').slideToggle();
-    })
+    });
 
     /**********Scroll***********/
     $('.js-scroll').on('click', goToSection);
