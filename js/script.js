@@ -53,32 +53,72 @@ $(document).ready(function() {
             dots: false,
             slidesToShow: 5,
             slidesToScroll: 1,
-        });
+            draggable: true,
+            // variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 865,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 564,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 394,
+                    settings: {
+                        dots: true,
+                        slidesToShow: 1,
+                    }
+                }
+        ]
+    });
     }
     /************END Sliders****************/
 
     /*************Ingredients***************/
     if ($('.ingredients__table')) {
         $('.ingredients__title').on('click', function (e) {
-            e.preventDefault();
-            var active = $(this),
-                // ingidient = active.attr('href').slice(1),
-                description = active.siblings(),
-                imgSrc = description.children('.description__pict').find('img').attr('src'),
-                name = active.children('.ingredients__name').html(),
-                value = active.children('.ingredients__value').html(),
-                text = description.children('.description__text').html();
+            if (!$(this).hasClass("ingredients__title--accordeon-btn")) {
+                e.preventDefault();
+                var active = $(this),
+                    // ingidient = active.attr('href').slice(1),
+                    description = active.siblings(),
+                    imgSrc = description.children('.description__pict').find('img').attr('src'),
+                    name = active.children('.ingredients__name').html(),
+                    value = active.children('.ingredients__value').html(),
+                    text = description.children('.description__text').html();
 
-            $('.ingredients__title').removeClass('active');
-            active.addClass('active');
+                $('.ingredients__title').removeClass('active');
+                active.addClass('active');
 
-            $('#ingredient_name').html(name);
-            $('#ingredient_image').attr('src', imgSrc);
-            $('#ingredient_value').html(value);
-            $('#ingredient_text').html(text);
+                $('#ingredient_name').html(name);
+                $('#ingredient_image').attr('src', imgSrc);
+                $('#ingredient_value').html(value);
+                $('#ingredient_text').html(text);
 
-            console.log(name);
-        })
+                console.log(name);
+            } else {
+                e.preventDefault();
+                $(this).toggleClass('open');
+                $(this).siblings(".ingredients__description--inline").slideToggle();
+            }
+
+        });
     }
 
     /*************Open Menu*****************/
@@ -169,10 +209,11 @@ $(document).ready(function() {
     });
 
     $(document).mouseup(function (e){
-        var div = $(".js-burger-menu");
+        var div = $(".header__nav");
+        // var btn = $("#js-open-menu");
         if (!div.is(e.target) && div.has(e.target).length === 0) {
             $("#js-open-menu").removeClass('active');
-            div.fadeOut();
+            $('.js-burger-menu').slideUp();
         }
     });
 });
